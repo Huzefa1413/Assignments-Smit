@@ -1,0 +1,40 @@
+body {
+  height: 100%;
+  width: 99%;
+  background: url(./home-hero3.jpg) no-repeat;
+  background-position: 50% 50%;
+  background-size: 1920px 1200px;
+}
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  background-color: #04AA6D;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+
+}
+
+tr:nth-child(odd) {
+  background-color: springgreen;
+}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}

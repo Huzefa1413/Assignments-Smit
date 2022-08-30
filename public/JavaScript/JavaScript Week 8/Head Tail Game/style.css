@@ -1,0 +1,81 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: blue;
+}
+div.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw 0px;
+    flex-direction: column;
+}
+h1{
+    font-size: 5.9vw;
+    color: white;
+}
+#timer{
+    display: none;
+}
+h3{
+    font-size: 2.5vw;
+}
+#gameoverheading{
+    display: none;
+}
+#winner{
+    display: none;
+}
+#mainbody{
+    justify-content: center;
+    display: none;
+}
+#mainbody>div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10vw;
+}
+h2{
+    font-size: 3.2vw;
+    color: gold;
+}
+.radio{
+    display: flex;
+    padding: 2vw 0px;
+}
+.radio label{
+    margin: 0 2vw;
+    font-size: 2.5vw;
+    color: white;
+}
+div.submitbutton{
+    display: flex;
+    justify-content: center;
+}
+.submitbutton button{
+    display: none;
+    margin: 5vw 10vw;
+    padding: 3vw;
+    font-size: 3.2vw;
+    border-radius: 10px;
+    background-color: burlywood;
+    cursor: pointer;
+}
+.submitbutton button:hover{
+    background-color: rgb(187, 156, 116);
+}
+#start{
+    margin: 3vw;
+    padding: 3vw;
+    font-size: 3.2vw;
+    border-radius: 10px;
+    background-color: burlywood;
+    cursor: pointer;
+}
+#start:hover{
+    background-color: rgb(187, 156, 116);
+}

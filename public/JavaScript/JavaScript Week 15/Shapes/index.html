@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 8vw;
+            font-family: cursive;
+            background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .main_div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .main_div>div {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .main_div>div>div {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shapes</h1>
+    <div class="main_div">
+        <div>
+            <h2>Square</h2>
+            <div id="square"></div>
+        </div>
+        <div>
+            <h2>Circle</h2>
+            <div id="circle"></div>
+        </div>
+        <div>
+            <h2>Oval</h2>
+            <div id="oval"></div>
+        </div>
+        <div>
+            <h2>Rectangle</h2>
+            <div id="rectangle"></div>
+        </div>
+        <div>
+            <h2>Triangle</h2>
+            <div id="triangle"></div>
+        </div>
+        <div>
+            <h2>Parallelogram</h2>
+            <div id="parallelogram"></div>
+        </div>
+        <div>
+            <h2>Trapezoid</h2>
+            <div id="trapezoid"></div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<style>
+    /* Chap 52 Manipulating images and text */
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!-- Chap 45 Events: link   -->
+
+    <a href="#" onClick="alert('Hi');">Click</a>
+
+    <a href="JavaScript:void(0)" onClick="alert('Hi');">Click</a>
+
+    <a href="JavaScript:void(0)" onClick="var greet='hi'; alert(greet);">Click</a>
+
+    <a href="JavaScript:void(0)" onClick="popup('Hi');">Click</a>
+
+    <!-- Chap 46 Events: button   -->
+
+    <input type="button" value="Click" onClick="alert('Hello world!');">
+
+    <a href="summary-page.html"><img src="button-sum-pg.png"></a>
+
+    <img src="button-greet.png" onClick="alert('Hello world!');">
+
+    <img src="button-greet.png" onClick="greetTheUser();">
+
+    <!-- Chap 47 Events: mouse   -->
+
+    <img src="before-pic.jpg" onMouseover="src='after-pic.jpg'">
+
+    <h1 onMouseover="alert('Be sure to get your shopping done today.');">World Ends Tomorrow</h1>
+
+    <h1 onMouseover="alert('Be sure to get your shopping done today.');">World Ends Tomorrow</h1>
+
+    <p id="loris" onMouseover="expand();">Slow Loris: Mouse over for more info</p>
+
+    <img src="before-pic.jpg" onMouseover="src='after-pic.jpg'" onMouseout="src='before-pic.jpg'">
+
+    <!-- Chap 48 Events: fields   -->
+
+    Email:<br>
+    <input type="text" size="30" onFocus="this.style.backgroundColor='yellow';">
+
+    Email:<br>
+    <input type="text" size="30" onFocus="this.style.backgroundColor='yellow';"
+        onBlur="this.style.backgroundColor='white';">
+
+    Email:<br>
+    <input type="text" size="30" onFocus="makeFieldYellow();" onBlur="makeFieldWhite();">
+
+    <!-- Chap 49 Reading field values   -->
+
+    <form onSubmit="checkAddress('email');">
+        Email:
+        <input type="text" id="email">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Chap 50 Setting field values   -->
+
+    <form>
+        ZIP:<br>
+        <input type="text" id="zip" onBlur="fillCity();"><br>
+        City:<br>
+        <input type="text" id="city">
+    </form>
+
+    <!-- Chap 51 Reading and setting paragraph text   -->
+
+    <p id="slowLoris">
+        Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
+        <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
+    </p>
+
+    <!-- Chap 52  Manipulating images and text   -->
+
+    <img src="blobfish.jpg" id="ugly" onClick="makeInvisible();">
+
+    <!-- Chap 53 Swapping images -->
+
+    <img src="before-pic.jpg" id="before" onMouseover="swapPic();">
+
+    <img src="before-pic.jpg" id="before" onMouseover="swapPic(id,'after-pic.jpg');">
+
+    <!-- Chap 56 Target all elements by tag name   -->
+
+    <p>This bed is too small.</p>
+    <p>This bed is too big.</p>
+    <p>This bed is just right.</p>
+
+    <!-- Chap 60 The DOM: Finding Children   -->
+
+    <div id="cal">
+        <p>Southern Cal is sunny.</p>
+        <p>Northern Cal is rainy.</p>
+        <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is sparse.</p>
+    </div>
+
+    <!-- Chap 61 The DOM: Junk artifacts and nodeType   -->
+
+    <div>
+        <p>There's not much to this.</p>
+        <p>Nor to this.</p>
+    </div>
+
+    <div id="humpty">
+        <p>All the king's horses.</p>
+        <p>All the dude's crew.</p>
+        <p>All the town's orthopedists.</p>
+    </div>
+
+    <!-- Chap 62 The DOM: More ways to target elements   -->
+
+    <div id="div1">
+        <div id="div2">
+            <p>Chicago</p>
+            <p>Kansas City</p>
+            <p>St. Louis</p>
+        </div>
+    </div>
+
+    <!-- Chap 65 The DOM: Attributes   -->
+
+    <div id="p1">
+        <p class="special">
+            <img src="images/slow-loris.png">
+            <span style="font-size:24px;"></span>
+        </p>
+    </div>
+
+    <!-- Chap 66 The DOM: Attribute names and values   -->
+
+    <p id="p1" class="c1" onMouseover="chgColor();"></p>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

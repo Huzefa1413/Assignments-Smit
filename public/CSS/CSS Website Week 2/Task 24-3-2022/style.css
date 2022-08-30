@@ -1,0 +1,159 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    background-color: #0e0e0e;
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+}
+div.menu{
+    width: 90px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    padding: 7.5px 0px 7.5px 0px;
+    float: left;
+}
+div.logo{
+    width: 190px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    float: left;
+}
+div.search{
+    width: 450px;
+    height: 45px;
+    float: left;
+    padding-left: 10px;
+    text-align: center;
+    padding-top: 5px;
+}
+div.search input{
+    width: 450px;
+    background-color: #1c1c1c;
+    border-style: none;
+    border-radius: 20px;
+    color: #fff;
+    height: 40px;
+    padding: 15px;
+    border-right: 0px;
+}
+div.search_button{
+    border: 0px;
+    padding-top: 8px;
+    text-align: center;
+    float: left;
+    height: 45px;
+    width: 50px;
+}
+div.search_button button{
+    border: 0px;
+    padding: 5px;
+    border-radius: 20px;
+}
+div.links{
+    float: left;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+}
+div.links ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+div.links ul li{
+    padding-left: 10px;
+    display: inline;
+}
+div.signin{
+    float: right;
+    width: 200px;
+    height: 50px;
+    text-align: right;
+    padding: 5px 20px 0px 0px;
+}
+div.signin button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 30px;
+    border: none;
+    background-color: blue;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+div.heading{
+    text-align: center;
+    width: 100%;
+    height: 150px;
+}
+div.heading span.first{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+div.heading span.second{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+div.heading span.third{
+    font-family: 'Courier New', Courier, monospace;
+}
+div.home_menu{
+    width: 100%;
+    height: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    border-color:black;
+    border-width: 5px 0px 5px 0px;
+    border-style: solid;
+}
+div.home_menu ul{
+    list-style: none;
+    padding: 30px 0px 30px 0px;
+    margin: 0px;
+    height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+}
+div.home_menu ul li{
+    padding: 0px 50px 0px 50px;
+    display: inline;
+}
+div.piano_image{
+    width: 100%;
+    height: 445px;
+    display: inline-block;
+}
+div.piano_image div.image1{
+    width: 445px;
+    height: 100%;
+    float: left;
+}
+div.piano_image div.image2{
+    width: 445px;
+    height: 100%;
+    float: left;
+}
+div.piano_image div.image3{
+    width: 445px;
+    height: 100%;
+    float: right;
+}
+div.paragraph{
+    text-align: center;
+    width: 100%;
+    height: 150px;
+}
+div.paragraph p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 36px;
+}
