@@ -5,60 +5,46 @@ function Student(stdid, fname, age, program) {
     this.program = program;
 }
 
-var studentsList = []
+var myTable = document.getElementsByTagName("tbody");
 
-var student1 = new Student("2020F-BSCS-096", "Huzefa Mustafa", 20, "Computer Science");
-studentsList.push(student1);
+var i = 0;
 
-var student2 = new Student("2020F-BSCS-052", "Bilal Hamid", 20, "Computer Science");
-studentsList.push(student2);
+function addvalue(id,name,ages,programs){
+    var myid = document.getElementById('id').value;
+    var myname = document.getElementById('name').value;
+    var myage = document.getElementById('ages').value;
+    var myprogram= document.getElementById('programs').value;
 
-var student3 = new Student("2020F-BSCS-091", "Saim Rafi", 20, "Computer Science");
-studentsList.push(student3);
+    mystudent = new Student(myid,myname,myage,myprogram);
 
-var student4 = new Student("2020F-BSCS-096", "Huzefa Mustafa", 20, "Computer Science");
-studentsList.push(student4);
-
-var student5 = new Student("2020F-BSCS-052", "Bilal Hamid", 20, "Computer Science");
-studentsList.push(student5);
-
-var student6 = new Student("2020F-BSCS-091", "Saim Rafi", 20, "Computer Science");
-studentsList.push(student6);
-
-var student7 = new Student("2020F-BSCS-096", "Huzefa Mustafa", 20, "Computer Science");
-studentsList.push(student7);
-
-var student8 = new Student("2020F-BSCS-052", "Bilal Hamid", 20, "Computer Science");
-studentsList.push(student8);
-
-var student9 = new Student("2020F-BSCS-091", "Saim Rafi", 20, "Computer Science");
-studentsList.push(student9);
-
-var myTable = document.getElementsByTagName("table");
-
-for (var i = 0; i < studentsList.length; i++) 
-{
     var tr = document.createElement("tr");
 
+    if(i%2 === 1)
+    {
+        tr.setAttribute('class','alt');
+    }
+
     var td = document.createElement("td");
-    var text = document.createTextNode(studentsList[i].stdid);
+    var text = document.createTextNode(mystudent.stdid);
     td.appendChild(text);
     tr.appendChild(td);
 
     var td = document.createElement("td");
-    var text = document.createTextNode(studentsList[i].fname);
+    var text = document.createTextNode(mystudent.fname);
     td.appendChild(text);
     tr.appendChild(td);
 
     var td = document.createElement("td");
-    var text = document.createTextNode(studentsList[i].age);
+    var text = document.createTextNode(mystudent.age);
     td.appendChild(text);
     tr.appendChild(td);
 
     var td = document.createElement("td");
-    var text = document.createTextNode(studentsList[i].program);
+    var text = document.createTextNode(mystudent.program);
     td.appendChild(text);
     tr.appendChild(td);
 
     myTable[0].appendChild(tr);
+
+    i++;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,56 @@
     <title>Students Info</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Students Information</h1>
-    <table>
-        <tr>
-            <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Age</th>
-            <th>Program</th>
-        </tr>
-    </table>
+    <div class="main_div">
+        <div class="login-box">
+            <h2>Student Data</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" required="" id="id">
+                    <label>Student Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" required="" id="name">
+                    <label>Student Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" required="" id="ages">
+                    <label>Student Age</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" required="" id="programs">
+                    <label>Program</label>
+                </div>
+                <a href="#" onclick="addvalue('id','name','ages','programs')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    ADD
+                </a>
+            </form>
+        </div>
+        <div class="datagrid">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Student Age</th>
+                        <th>Program</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
+
 </html>
