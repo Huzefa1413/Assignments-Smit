@@ -110,7 +110,6 @@ function pushTableData(data)
             var thtext = document.createTextNode(data.team);
             th.appendChild(thtext);
             tr.appendChild(th);
-
             var td = document.createElement("td");
             var tdtext = document.createTextNode(data.played);
             td.appendChild(tdtext);

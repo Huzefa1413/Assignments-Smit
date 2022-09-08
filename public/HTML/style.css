@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #2b2f77;
+    background: -webkit-linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    background: linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    background-attachment: fixed;
+}
+
+.maindiv{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.maindiv div{
+    margin: 2rem;
+    width: 200px;
+    height: 100px;
+    background: #d7d7d7;
+    background: -webkit-linear-gradient(0deg, #d7d7d7 0%, #eeeeee 100%);
+    background: linear-gradient(0deg, #d7d7d7 0%, #eeeeee 100%);
+    border-radius: 10px;
+    border: 1px solid silver;
+}
+
+.maindiv div a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    color: black;
+    font-family: cursive;
+}
+
+.maindiv div.back{
+    display: none;
+}
