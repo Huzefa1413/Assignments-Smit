@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <!-- Styles  -->
+  <link rel="stylesheet" href="./style.css" />
+  <!-- Styles End  -->
+
+</head>
+
+<body>
+  <!-- Header Section -->
+
+  <header class="header" id="header">
+
+    <div class="row">
+
+      <aside class="col left">
+
+        <a href="JavaScript:void(0)" class="logo" onclick="hideIframe()">
+
+          <img src="./favicon.png" alt="Logo" class="img" />
+
+          Robotsy
+        </a>
+
+      </aside>
+
+      <aside class="col right">
+
+        <div class="profile">
+
+          <img src="" alt="profile-pic" class="img" id="navprofpic1" />
+
+          <i class="fas fa-ellipsis-h icon" title="Profile Settings" id="settingsMenuIcon"></i>
+
+        </div>
+
+      </aside>
+
+      <nav class="navSetting">
+
+        <a href="./profile/index.html" class="block">
+
+          <img src="" alt="profile-pic" class="icon" id="navprofpic2" />
+
+          <div class="right">
+
+            <aside>
+
+              <h4 class="title" id="navusername"></h4>
+
+              <span class="help">see your profile</span>
+
+            </aside>
+
+          </div>
+
+        </a>
+
+        <div class="options">
+
+          <a href="../SignUp,SignIn/index.html" class="option">
+
+            <div class="left">
+
+              <i class="fas fa-sign-out-alt icon"></i>
+
+              <h4 class="title">logout</h4>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- IconNav Section -->
+  <section class="iconNav" id="iconNav">
+
+    <nav class="navContainer left">
+
+      <a href="javascript:void(0)" class="link"><i class="icon fa fa-home" onclick="hideIframe()"></i></a>
+      <a href="javascript:void(0)" class="link"><i class="icon fa fa-futbol-o" onclick="displayFootball()"></i> </a>
+      <a href="javascript:void(0)" class="link"><i class="icon fa fa-user" onclick="displayStudent()"></i> </a>
+      <a href="javascript:void(0)" class="link"><i class="icon fa fa-cubes" onclick="displayShapes()"></i></a>
+      <a href="javascript:void(0)" class="link"><i class="icon fa fa-check-circle" onclick="displayTodo()"></i></a>
+
+    </nav>
+
+  </section>
+  <!-- IconNav Section End -->
+
+  <!-- Left Sidebar Section -->
+  <section class="leftSidebar" id="leftSidebar">
+
+    <div class="row">
+
+      <nav class="navLinks">
+
+        <div class="link" onclick="hideIframe()">
+
+          <i class="icon fa fa-home"></i>
+
+          <span class="name">Home</span>
+
+        </div>
+
+        <div class="link" onclick="displayFootball()">
+
+          <i class="fa fa-futbol-o icon"></i>
+
+          <span class="name">Fifa World Cup 2018 Points Table</span>
+
+        </div>
+
+        <div class="link" onclick="displayStudent()">
+
+          <i class="fa fa-user icon"></i>
+
+          <span class="name">Students Info</span>
+
+        </div>
+
+        <div class="link" onclick="displayShapes()">
+
+          <i class="fa fa-cubes icon"></i>
+
+          <span class="name">Shapes</span>
+
+        </div>
+
+        <div class="link" onclick="displayTodo()">
+
+          <i class="fa fa-check-circle icon"></i>
+
+          <span class="name">Todo App</span>
+
+        </div>
+      </nav>
+
+    </div>
+  </section>
+  <!-- /.leftSidebar -->
+
+  <!-- Left Sidebar Section End -->
+
+  <!-- Main Content Section -->
+  <section class="main" id="main">
+
+    <iframe src="../../../JavaScript Week 15/Football Groups/index.html" frameborder="0" id="football"></iframe>
+    <iframe src="../../../JavaScript Week 15/Students Info/index.html" frameborder="0" id="student"></iframe>
+    <iframe src="../../../JavaScript Week 15/Shapes/index.html" frameborder="0" id="shapes"></iframe>
+    <iframe src="../../../JavaScript Week 16/Todo App with Local Storage/index.html" frameborder="0" id="todo"></iframe>
+
+  </section>
+  <!-- Main Content Section End -->
+
+
+  <!-- Scripts -->
+  <script src="./app.js"></script>
+  <script src="./fontawsome.js"></script>
+  <!-- Scripts End -->
+</body>
+
+</html>

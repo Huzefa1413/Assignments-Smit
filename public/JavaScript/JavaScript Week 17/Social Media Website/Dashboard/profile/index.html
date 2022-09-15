@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+
+  <header class="header" id="header">
+
+    <div class="row">
+
+      <aside class="col left">
+
+        <a href="../index.html" class="logo">
+
+          <img src="../favicon.png" alt="Logo" class="img" />
+          
+          Robotsy
+
+        </a>
+
+      </aside>
+
+      <aside class="col right">
+
+        <div class="profile">
+
+          <img src="" alt="Profile Picture" class="img" id="navprofpic1" />
+          
+          <i class="fas fa-ellipsis-h icon" title="Profile Settings" id="settingsMenuIcon"></i>
+        
+        </div>
+
+      </aside>
+
+      <nav class="navSetting">
+
+        <div class="options">
+
+          <a href="../../SignUp,SignIn/index.html" class="option">
+            
+            <div class="left">
+            
+              <i class="fas fa-sign-out-alt icon"></i>
+              
+              <h4 class="title">Logout</h4>
+            
+            </div>
+          
+          </a>
+       
+        </div>
+        
+      </nav>
+
+    </div>
+
+  </header>
+
+
+    <div class="maindiv">
+        <div class="coverPicture"><img src="https://source.unsplash.com/1000x300/?nature" alt="Cover Picture"></div>
+        <div class="profilePicture"><img src="" alt="Profile Picture" id="profpic"></div>
+        <div class="table">
+            <div class="row" style="border-top: 5px solid rgb(199, 162, 162);">
+                <div class="col"><span>Username</span></div>
+                <div class="col"><span id="username"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"><span>Email</span></div>
+                <div class="col"><span id="email"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"><span>Password</span></div>
+                <div class="col"><span id="password"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"><span>Number</span></div>
+                <div class="col"><span id="number"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"><span>Gender</span></div>
+                <div class="col"><span id="gender"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"><span>Date of Birth</span></div>
+                <div class="col"><span id="dob"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"><span>Postal Code</span></div>
+                <div class="col"><span id="postcode"></span></div>
+            </div>
+            <div class="row" style="border-bottom: 5px solid rgb(199, 162, 162);">
+                <div class="col"><span>Address</span></div>
+                <div class="col"><span id="address"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="../fontawsome.js"></script>
+</body>
+</html>

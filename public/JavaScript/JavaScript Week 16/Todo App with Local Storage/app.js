@@ -45,6 +45,7 @@ function display() {
             var div = document.createElement("div");
             div.setAttribute("id", myData[i].id);
             var dataspan = document.createElement("span");
+            dataspan.setAttribute("class","overflow");
             var text = document.createTextNode(myData[i].input);
             dataspan.appendChild(text);
             
