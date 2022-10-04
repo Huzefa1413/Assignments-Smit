@@ -23,25 +23,13 @@ function hidepass(myid) {
   id.parentElement.previousElementSibling.type = "password";
 }
 
-function next() {
-  document.getElementById("form1").style.display = "none";
-  document.getElementById("form2").style.display = "flex";
-}
-function previous() {
-  document.getElementById("form1").style.display = "flex";
-  document.getElementById("form2").style.display = "none";
-}
-
-function PushData(username, email, password, number, address, postCode, gender, dob, profpic) {
+function PushData(username, email, password, number) {
   this.username = username;
   this.email = email;
   this.password = password;
   this.number = number;
-  this.address = address;
-  this.postCode = postCode;
-  this.gender = gender;
-  this.dob = dob;
-  this.profpic = profpic;
+  this.ticket = [];
+  this.seats = [];
 }
 
 var myData = JSON.parse(window.localStorage.getItem("Users Array"))
@@ -65,13 +53,9 @@ function savedata(sign_up) {
   var password = document.getElementById("supass").value;
   var confpassword = document.getElementById("suconfpass").value;
   var number = document.getElementById("sunumber").value;
-  var address = document.getElementById("suaddress").value;
-  var postCode = document.getElementById("suposcode").value;
-  var dob = document.getElementById("sudateofbirth").value;
-  var gender = document.querySelector('input[name="gender"]:checked').value;
   var country = document.getElementById("sucountry").options[document.getElementById("sucountry").selectedIndex].value;
 
-  if (username === "" || email === "" || password === "" || confpassword === "" || number === "" || address === "" || postCode === "" || dob === "" || gender === "" || country === "") {
+  if (username === "" || email === "" || password === "" || confpassword === "" || number === "" || country === "") {
     alert("Information Missing, Please Enter Complete Information");
   }
   else {
@@ -113,65 +97,38 @@ function savedata(sign_up) {
           document.getElementById("sunumber").focus();
         }
         else {
-          if (postCode.length !== 6) {
-            alert("Postal Code Length is not Valid, Valid length is 6 digits");
-            document.getElementById("suposcode").focus();
+
+
+          if (password !== confpassword) {
+            alert("Passwords Donot Match");
+            document.getElementById("suconfpass").focus();
           }
           else {
-            if (document.getElementById("suprofpic").files.length <= 0) {
-              alert("Please Select Profile Picture");
-              document.getElementById("suprofpic").focus();
-            }
-            else {
-              if (password !== confpassword) {
-                alert("Passwords Donot Match");
-                document.getElementById("suconfpass").focus();
-              }
-              else {
-                var reader = new FileReader();
-                var name = document.getElementById("suprofpic").files[0].name;
-                reader.addEventListener('load', function () {
-                  if (this.result && localStorage) {
-                    window.localStorage.setItem(name, this.result);
-                  }
-                })
-                reader.readAsDataURL(document.getElementById('suprofpic').files[0]);
-                
-                sign_up.previousElementSibling.style.display = "none";
-                sign_up.className = "loader";
-                sign_up.value = "";
-                sign_up.removeAttribute("onclick");
+            sign_up.className = "loader";
+            sign_up.value = "";
+            sign_up.removeAttribute("onclick");
 
-                number.toString();
-                country += number;
-                number = country;
-                
-                var user = new PushData(username, email, password, number, address, postCode, gender, dob, name);
-                usersArray.push(user);
-                setTimeout(function () {
-                  sign_up.previousElementSibling.style.display = "inline";
-                  sign_up.className = "btn";
-                  sign_up.value = "Sign Up";
-                  sign_up.setAttribute("onclick", 'savedata(this)');
-                  alert("Account Created, Congratulation " + username + ", you are now One Of Us");
-                  document.getElementById("suusername").value = "";
-                  document.getElementById("suemail").value = "";
-                  document.getElementById("supass").value = "";
-                  document.getElementById("suconfpass").value = "";
-                  document.getElementById("sunumber").value = "";
-                  document.getElementById("suaddress").value = "";
-                  document.getElementById("suposcode").value = "";
-                  document.getElementById("sudateofbirth").value = "";
-                  document.getElementById("suprofpic").value = "";
-                  document.getElementById('sucountry').value = "";
-                  document.getElementById('countrycode').innerText = "";
-                  document.getElementById("form1").style.display = "flex";
-                  document.getElementById("form2").style.display = "none";
-                }, 5000);
+            number.toString();
+            country += number;
+            number = country;
 
-                window.localStorage.setItem("Users Array", JSON.stringify(usersArray));
-              }
-            }
+            var user = new PushData(username, email, password, number);
+            usersArray.push(user);
+            setTimeout(function () {
+              sign_up.className = "btn";
+              sign_up.value = "Sign Up";
+              sign_up.setAttribute("onclick", 'savedata(this)');
+              alert("Account Created, Congratulation " + username + ", you are now One Of Us");
+              document.getElementById("suusername").value = "";
+              document.getElementById("suemail").value = "";
+              document.getElementById("supass").value = "";
+              document.getElementById("suconfpass").value = "";
+              document.getElementById("sunumber").value = "";
+              document.getElementById('sucountry').value = "";
+              document.getElementById('countrycode').innerText = "";
+            }, 5000);
+
+            window.localStorage.setItem("Users Array", JSON.stringify(usersArray));
           }
         }
       }
@@ -215,7 +172,7 @@ function login(log_in) {
             log_in.setAttribute("onclick", 'login(this)');
             document.getElementById("siemail").value = "";
             document.getElementById("sipass").value = "";
-            window.location.href = "../Dashboard/index.html";
+            window.location.href = "../Cinema/index.html";
             window.localStorage.setItem("Login Email", JSON.stringify(email));
           }, 5000);
         }

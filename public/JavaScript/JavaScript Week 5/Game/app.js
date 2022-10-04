@@ -10,7 +10,6 @@ for(var i = 0; i <= Math.floor(Math.random() * 4) + 2; i++)
 console.log(lettersArray);
 }
 function compareWords(){
-
 var inputFromUser1 = prompt("Enter any word : ");
 var inputFromUser2 = prompt("Enter any word : ");
 var inputFromUser3 = prompt("Enter any word : ");
