@@ -131,15 +131,29 @@ form.sign-in-form {
   border-top: 16px solid #3498db;
   width: 60px;
   height: 60px;
-  animation: spin 5s linear;
+  animation: spin infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(360deg); }
-  50% { transform: rotate(720deg);}
-  75% {transform: rotate(1080deg);}
-  100% {transform: rotate(1440deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(720deg);
+  }
+
+  75% {
+    transform: rotate(1080deg);
+  }
+
+  100% {
+    transform: rotate(1440deg);
+  }
 }
 
 .panels-container {
@@ -223,14 +237,18 @@ form.sign-in-form {
   transform: translateX(800px);
 }
 
-.eye{
+.eye {
   position: absolute;
   left: 90%;
   cursor: pointer;
 }
-#hide1signin,#hide1signuppass,#hide1signupconfpass{
+
+#hide1signin,
+#hide1signuppass,
+#hide1signupconfpass {
   display: none;
 }
+
 /* ANIMATION */
 
 .container.sign-up-mode:before {
@@ -275,6 +293,7 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
+
   .signin-signup {
     width: 100%;
     top: 95%;
@@ -381,9 +400,11 @@ form.sign-in-form {
   .image {
     display: none;
   }
+
   .panel .content {
     padding: 0.5rem 1rem;
   }
+
   .container {
     padding: 1.5rem;
   }
@@ -399,15 +420,16 @@ form.sign-in-form {
   }
 }
 
-#form2{
+#form2 {
   display: none;
 }
 
-.gender{
+.gender {
   height: 60px;
 }
-.gender p{
-  cursor:auto;
+
+.gender p {
+  cursor: auto;
   font-weight: 500;
   outline: none;
   border: none;
@@ -416,10 +438,11 @@ form.sign-in-form {
   color: #aaa;
 }
 
-.date{
+.date {
   padding-right: 20px;
 }
-.date p{
+
+.date p {
   font-weight: 500;
   outline: none;
   border: none;
@@ -429,15 +452,18 @@ form.sign-in-form {
   display: flex;
   align-items: center;
 }
-.date p input{
+
+.date p input {
   padding-left: 10px;
   cursor: pointer;
 }
-.file{
+
+.file {
   height: 65px;
 }
-.file p{
-  cursor:auto;
+
+.file p {
+  cursor: auto;
   font-weight: 500;
   outline: none;
   border: none;
@@ -446,7 +472,7 @@ form.sign-in-form {
   color: #aaa;
 }
 
-.country select{
+.country select {
   background: none;
   outline: none;
   border: none;
@@ -458,28 +484,30 @@ form.sign-in-form {
   display: flex;
   align-items: center;
 }
-.country select option{
+
+.country select option {
   color: #333;
   background-color: #f0f0f0;
   width: 100px;
 }
 
-.number{
+.number {
   display: grid;
   grid-template-columns: 15% 15% 70%;
 }
 
 .number span {
-  line-height: 55px; 
+  line-height: 55px;
   font-size: 1.1rem;
   font-weight: 500;
   font-size: 1.1rem;
   color: #aaa;
 }
-.number input{
+
+.number input {
   padding-left: 10px;
 }
 
-#form1 > p{
+#form1>p {
   color: red;
 }

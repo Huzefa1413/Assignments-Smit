@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="navbar">
-        <div class="menu">
-          <h3 class="logo">Huzefa<span>Mustafa</span></h3>
-          <div class="hamburger-menu" onclick="check()">
-            <div class="bar"></div>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="menu">
+        <h3 class="logo">Huzefa<span>Mustafa</span></h3>
+        <div class="hamburger-menu" onclick="check()">
+          <div class="bar"></div>
         </div>
-      </div>
-
-      <div class="main-container">
-        <div class="main">
-          <header>
-            <div class="overlay">
-              <div class="inner">
-                <h2 class="title">Welcome To My Website</h2>
-                <p>
-                  Click on Navigation Icon on Top-Right to see my projects.
-                </p>
-              </div>
-            </div>
-          </header>
-        </div>
-
-        <div class="shadow one"></div>
-        <div class="shadow two"></div>
-      </div>
-
-      <div class="links">
-        <ul>
-          <!-- <li>
-            <a href="./Resume/index.html" style="--i: 0.1s;">Resume</a>
-          </li> -->
-          <li>
-            <a href="./HTML/index.html" target="_blank" style="--i: 0.05s;">HTML</a>
-          </li>
-          <li>
-            <a href="./CSS/index.html" target="_blank" style="--i: 0.15s;">CSS</a>
-          </li>
-          <li>
-            <a href="./JavaScript/index.html" target="_blank" style="--i: 0.2s;">JavaScript</a>
-          </li>
-          <!-- <li>
-            <a href="#" style="--i: 0.25s;">About</a>
-          </li>
-          <li>
-            <a href="#" style="--i: 0.3s;">Contact</a>
-          </li> -->
-        </ul>
       </div>
     </div>
 
-    <script>
-      const hamburger_menu = document.querySelector(".hamburger-menu");
-const container = document.querySelector(".container");
+    <div class="main-container">
+      <div class="main">
+        <header>
+          <div class="overlay">
+            <div class="inner">
+              <h2 class="title">Welcome To My Website</h2>
+              <p>
+                Click on Navigation Icon on Top-Right to see my projects.
+              </p>
+            </div>
+          </div>
+        </header>
+      </div>
 
-hamburger_menu.addEventListener("click", () => { container.classList.toggle("active"); });
+      <div class="shadow one"></div>
+      <div class="shadow two"></div>
+    </div>
 
-function check() {
-    const maincontainer = document.querySelector(".main-container");
-        if (window.matchMedia("(max-width:660px)").matches) 
-        {
-            if (!container.classList.contains("active"))
-            {
-                maincontainer.setAttribute("style","display:none")       
-            }
-            else{
-                maincontainer.removeAttribute("style");
-            }
+    <div class="links">
+      <ul>
+        <!-- <li>
+            <a href="./Resume/index.html" style="--i: 0.1s;">Resume</a>
+          </li> -->
+        <li>
+          <a href="./HTML/index.html" target="_blank" style="--i: 0.05s;">HTML</a>
+        </li>
+        <li>
+          <a href="./CSS/index.html" target="_blank" style="--i: 0.15s;">CSS</a>
+        </li>
+        <li>
+          <a href="./JavaScript/index.html" target="_blank" style="--i: 0.2s;">JavaScript</a>
+        </li>
+        <li>
+          <a href="https://react-smit.web.app/" target="_blank" style="--i: 0.25s;">React</a>
+        </li>
+        <!-- <li>
+            <a href="#" style="--i: 0.3s;">Contact</a>
+          </li> -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    const container = document.querySelector(".container");
+
+    hamburger_menu.addEventListener("click", () => { container.classList.toggle("active"); });
+
+    function check() {
+      const maincontainer = document.querySelector(".main-container");
+      if (window.matchMedia("(max-width:660px)").matches) {
+        if (!container.classList.contains("active")) {
+          maincontainer.setAttribute("style", "display:none")
         }
-}
-    </script>
-  </body>
+        else {
+          maincontainer.removeAttribute("style");
+        }
+      }
+    }
+  </script>
+</body>
+
 </html>
