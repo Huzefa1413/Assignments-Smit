@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.maindiv {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    min-height: 70vh;
+}
+
+.leftbox {
+    text-align: center;
+    padding-top: 30px;
+    padding: 30px 0px;
+    width: 25%;
+}
+
+.leftbox ul {
+    padding: 0px;
+}
+
+.leftbox ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.leftbox ul li:hover {
+    cursor: pointer;
+    background-color: skyblue;
+    transition: all 1s;
+}
+
+.leftbox ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.leftbox img {
+    width: 80%;
+    border: 1px solid black;
+}
+
+.rightbox {
+    width: 75%;
+    border-left: 2px solid black;
+    padding: 10px;
+}
+
+.rightbox .top {
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.rightbox .bottom .cardbox {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.rightbox .bottom .cardbox .card {
+    margin-top: 10px;
+    height: fit-content;
+    border: 1px solid black;
+    width: 18rem;
+}
+
+.rightbox .bottom .cardbox .card img {
+    border-bottom: 2px solid black;
+}
+
+@media screen and (max-width:550px) {
+    .leftbox h2 {
+        font-size: 20px;
+    }
+
+    .leftbox ul li a {
+        font-size: 15px;
+    }
+
+    .leftbox ul li {
+        margin-bottom: 10px;
+    }
+}
